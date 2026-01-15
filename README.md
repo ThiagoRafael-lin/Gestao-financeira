@@ -1,6 +1,6 @@
 # 💰 Sistema de Gestão Financeira Full Stack
 
-Este é um sistema completo de controle de finanças pessoais, permitindo ao usuário gerenciar receitas e despesas com cálculos de saldo em tempo real. Desenvolvido para demonstrar a integração entre um backend robusto em Spring Boot e um frontend moderno em React.
+Este projeto nasceu da necessidade de criar uma ferramenta ágil e intuitiva para o controle financeiro pessoal. O objetivo foi aplicar conceitos fundamentais de desenvolvimento Full Stack, como a criação de uma API REST robusta, a manipulação de estados no Frontend e a integração fluida entre as duas camadas.
 
 ## 🚀 Tecnologias Utilizadas
 
