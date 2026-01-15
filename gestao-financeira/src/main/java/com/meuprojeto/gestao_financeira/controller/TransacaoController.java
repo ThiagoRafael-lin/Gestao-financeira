@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/transacoes")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://gestao-financeira-pink.vercel.app/")
 public class TransacaoController {
     @Autowired
     private TransacaoRepository repository;
