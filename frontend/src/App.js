@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { Wallet, PlusCircle, Trash2 } from "lucide-react";
 import './App.css'
 import api from './services/api';
