@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Wallet, PlusCircle, Trash2 } from "lucide-react";
 import './App.css'
+import api from './services/api';
 
 function App() {
   const [transacoes, setTransacoes] = useState([]);
@@ -16,7 +17,7 @@ function App() {
 
   const carregarTransacoes = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/transacoes");
+      const response = await api.get("/api/transacoes");
       setTransacoes(response.data);
     } catch (error) {
       console.error("Erro ao buscar dados:", error);
@@ -27,7 +28,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Impede a página de recarregar
     try {
-      await axios.post("http://localhost:8080/api/transacoes", novaTransacao);
+      await api.post("/api/transacoes", novaTransacao);
       setNovaTransacao({
         descricao: "",
         valor: "",
@@ -43,7 +44,7 @@ function App() {
   const excluirTransacao = async (id) => {
     if (window.confirm("Tem certeza que deseja excluir esta transação?")) {
       try {
-        await axios.delete(`http://localhost:8080/api/transacoes/${id}`);
+        await api.delete(`/api/transacoes/${id}`);
         // Após excluir no banco, atualizamos a lista na tela
         carregarTransacoes();
       } catch (error) {
